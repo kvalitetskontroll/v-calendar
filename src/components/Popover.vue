@@ -289,7 +289,7 @@ export default {
       &:after
         display: block
         position: absolute
-        background: inherit
+        background: #0aaef3
         border: inherit
         border-width: 1px 1px 0 0
         width: 12px

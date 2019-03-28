@@ -3,19 +3,19 @@ import { isObject, isFunction } from './typeCheckers';
 
 const defaults = {
   componentPrefix: 'v',
-  firstDayOfWeek: 1,
+  firstDayOfWeek: 2,
   navVisibility: 'focus',
   titlePosition: 'center',
-  titleTransition: 'slide-h',
-  weeksTransition: 'slide-h',
+  titleTransition: 'none',
+  weeksTransition: 'none',
   paneWidth: 256, // px,
   showLinkedButtons: false,
   formats: {
     title: 'MMMM YYYY',
     weekdays: 'W',
     navMonths: 'MMM',
-    input: ['L', 'YYYY-MM-DD', 'YYYY/MM/DD'],
-    dayPopover: 'WWW, MMM D, YYYY',
+    input: ['DD.MM.YYYY'],
+    dayPopover: 'L',
     data: ['L', 'YYYY-MM-DD', 'YYYY/MM/DD'],
   },
   datePickerInputProps: ({ dragValue, mode, format }) => ({
@@ -42,9 +42,9 @@ const defaults = {
     }),
   }),
   datePickerUpdateOnInput: false,
-  datePickerTintColor: '#66B3CC',
-  datePickerShowCaps: false,
-  datePickerShowDayPopover: true,
+  datePickerTintColor: '#0aaef3',
+  datePickerShowCaps: true,
+  datePickerShowDayPopover: false,
   datePickerDisabledAttribute: {
     contentStyle: ({ isHovered }) => ({
       color: '#d98c8c',
@@ -60,7 +60,7 @@ const defaults = {
   popoverExpanded: false,
   popoverDirection: 'bottom',
   popoverAlign: 'left',
-  popoverVisibility: POPOVER_VISIBILITIES.HOVER,
+  popoverVisibility: POPOVER_VISIBILITIES.FOCUS,
   popoverContentOffset: 10, // px
   popoverKeepVisibleOnInput: false,
   maxSwipeTime: 300, // ms
@@ -102,9 +102,9 @@ const defaults = {
     verticalDivider: { borderLeft: '1px solid #dadada' },
     horizontalDivider: { borderTop: '1px solid #dadada' },
     pane: null,
-    header: null,
+    header: { background: '#0aaef3', color: '#fff' },
     headerTitle: null,
-    headerArrows: null,
+    headerArrows: { background: '#0aaef3' },
     headerHorizontalDivider: null,
     weekdays: null,
     weekdaysHorizontalDivider: null,
