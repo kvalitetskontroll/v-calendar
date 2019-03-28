@@ -54,6 +54,9 @@ const locales = {
   ko: { L: 'YYYY.MM.DD' },
   // Macedonian
   mk: { dow: 2, L: 'D.MM.YYYY' },
+  // Norwegian
+  nb: { dow: 2, L: 'D. MMMM YYYY' },
+  nn: { dow: 2, L: 'D. MMMM YYYY' },
   // Polish
   pl: { dow: 2, L: 'DD.MM.YYYY' },
   // Portuguese
@@ -77,6 +80,7 @@ const locales = {
 };
 locales.en = locales['en-US'];
 locales.zh = locales['zh-CN'];
+locales.no = locales.nb;
 
 // Month and day names are derived from Intl.DateTimeFormat
 const getMonthNames = (locale, length) => {
